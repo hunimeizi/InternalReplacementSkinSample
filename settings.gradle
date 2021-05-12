@@ -1,0 +1,3 @@
+include ':internalReplacementSkinSample'
+include ':app'
+rootProject.name = "InternalReplacementSkinSample"
