@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InternalReplacementSkinSample">
-        <activity android:name=".MainActivity"
-            android:configChanges="uiMode">
+        <activity android:name=".MainActivity">
+            <!--android:configChanges="uiMode"> &lt;!&ndash; 需要配置此属性=uiMode，才能更换navigation ????  &ndash;&gt;-->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

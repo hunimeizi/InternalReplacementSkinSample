@@ -1,3 +1,3 @@
-include ':internalReplacementSkinSample'
+include ':InternalReplacementSkin'
 include ':app'
 rootProject.name = "InternalReplacementSkinSample"

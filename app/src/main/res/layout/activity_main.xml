@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:text="同学们，大家好！"
+        android:text="Hello Android"
         android:textColor="@color/commonTextColor1"
         android:textSize="30sp"
         android:textStyle="bold" />
