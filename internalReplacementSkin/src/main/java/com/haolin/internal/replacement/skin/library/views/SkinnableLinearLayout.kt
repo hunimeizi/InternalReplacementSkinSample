@@ -2,7 +2,7 @@ package com.haolin.internal.replacement.skin.library.views
 
 import android.content.Context
 import android.util.AttributeSet
-import androidx.appcompat.widget.LinearLayoutCompat
+import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import com.haolin.internal.replacement.skin.library.R
 import com.haolin.internal.replacement.skin.library.bean.AttrsBean
@@ -12,9 +12,9 @@ class SkinnableLinearLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : LinearLayoutCompat(context, attrs, defStyleAttr), ViewsMatch {
+) : LinearLayout(context, attrs, defStyleAttr), ViewsMatch {
 
-    private val attrsBean: AttrsBean
+    private val attrsBean: AttrsBean = AttrsBean()
     override fun skinnableView() {
         // 根据自定义属性，获取styleable中的background属性
         val key =
@@ -31,7 +31,6 @@ class SkinnableLinearLayout @JvmOverloads constructor(
     }
 
     init {
-        attrsBean = AttrsBean()
 
         // 根据自定义属性，匹配控件属性的类型集合，如：background
         val typedArray = context.obtainStyledAttributes(

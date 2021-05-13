@@ -14,7 +14,7 @@ class SkinnableImageView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : AppCompatImageView(context, attrs, defStyleAttr), ViewsMatch {
 
-    private val attrsBean: AttrsBean
+    private val attrsBean: AttrsBean = AttrsBean()
 
     override fun skinnableView() {
         // 根据自定义属性，获取styleable中的src属性
@@ -29,7 +29,6 @@ class SkinnableImageView @JvmOverloads constructor(
     }
 
     init {
-        attrsBean = AttrsBean()
 
         // 根据自定义属性，匹配控件属性的类型集合，如：src
         val typedArray = context.obtainStyledAttributes(

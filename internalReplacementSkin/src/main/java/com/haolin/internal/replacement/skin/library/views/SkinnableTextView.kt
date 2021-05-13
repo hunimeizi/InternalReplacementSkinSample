@@ -14,7 +14,7 @@ class SkinnableTextView @JvmOverloads constructor(
     defStyleAttr: Int = android.R.attr.textViewStyle
 ) : AppCompatTextView(context, attrs, defStyleAttr), ViewsMatch {
 
-    private val attrsBean: AttrsBean
+    private val attrsBean: AttrsBean = AttrsBean()
     override fun skinnableView() {
         // 根据自定义属性，获取styleable中的background属性
         var key = R.styleable.SkinnableTextView[R.styleable.SkinnableTextView_android_background]
@@ -38,7 +38,6 @@ class SkinnableTextView @JvmOverloads constructor(
     }
 
     init {
-        attrsBean = AttrsBean()
 
         // 根据自定义属性，匹配控件属性的类型集合，如：background + textColor
         val typedArray = context.obtainStyledAttributes(

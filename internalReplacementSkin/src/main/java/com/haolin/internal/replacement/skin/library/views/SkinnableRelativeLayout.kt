@@ -14,7 +14,7 @@ class SkinnableRelativeLayout @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : RelativeLayout(context, attrs, defStyleAttr), ViewsMatch {
 
-    private val attrsBean: AttrsBean
+    private val attrsBean: AttrsBean = AttrsBean()
     override fun skinnableView() {
         // 根据自定义属性，获取styleable中的background属性
         val key =
@@ -31,7 +31,6 @@ class SkinnableRelativeLayout @JvmOverloads constructor(
     }
 
     init {
-        attrsBean = AttrsBean()
 
         // 根据自定义属性，匹配控件属性的类型集合，如：background
         val typedArray = context.obtainStyledAttributes(
